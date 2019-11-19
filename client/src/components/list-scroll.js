@@ -10,10 +10,10 @@ export default class ListScroll extends Component {
 	}	
 
 	componentDidMount =  () => {
-		// this.timerID = setInterval(
-    //   () => this.updateTasks(),
-    //   1000
-    // );
+		this.timerID = setInterval(
+      () => this.updateTasks(),
+      1000
+    );
 		
 		let count = 0;
 		 axios.get('http://localhost:5000/tasks/')
