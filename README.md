@@ -6,9 +6,9 @@
 
 cd server/config/db.js
 
-run app:
+* run app:
 
-*(React) 
+* (React) 
 
 cd client
 
@@ -16,7 +16,7 @@ npm i
 
 npm run start
 
-*(Node js) 
+* (Node js) 
 
 cd server
 
