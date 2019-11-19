@@ -85,6 +85,15 @@ router.post('/edit-random',  async (req, res, next) => {
 
 
 router.get('/insert-fake-tasks',  async (req, res, next) => {
+
+	let sql = `CREATE TABLE IF NOT EXISTS tasks
+	(
+		key SERIAL PRIMARY KEY,
+		task_title character varying(255),
+		create_date integer		
+	)`;
+	await knex.raw(sql);
+
 	let createTime = (Math.floor(Number(new Date()) / 1000)+1);
 	for (let i = 0; i < 1000; i++ ){
 		let taskTitle = faker.lorem.word();
@@ -95,7 +104,7 @@ router.get('/insert-fake-tasks',  async (req, res, next) => {
 		});
 	}		
 	res.send({message: '+1000 fake tasks added'});
-}); 
+});
 
 
 module.exports = router;
