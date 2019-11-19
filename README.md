@@ -8,8 +8,8 @@ cd server/config/db.js
 run app:
 
 (React)
-cd client 
-npm i
+* cd client 
+* npm i
 npm run start
 (Node js)
 cd server
